@@ -1,12 +1,15 @@
 package geekbrains.ru.lesson_6;
 
-public class Cat extends Animal {
+class Cat extends Animal {
 
-    public String name;
-    Cat (String name) {
+    String name;
+    int run;
+    int swim;
+    int jump;
+    Cat (String name, int run, int swim, float jump) {
+        super(run, swim, jump);
         this.name = name;
     }
-
     @Override
     public boolean run(int x) {
         return x < 200;

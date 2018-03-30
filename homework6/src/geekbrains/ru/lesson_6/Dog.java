@@ -1,10 +1,24 @@
 package geekbrains.ru.lesson_6;
 
-public class Dog extends Animal {
+
+import java.util.Random;
+
+class Dog extends Animal {
+
+    private static Random random = new Random();
+
+    String name;
+    int run;
+    int swim;
+    int jump;
+    Dog (String name, int run, int swim, float jump) {
+        super(run, swim, jump);
+        this.name = name;
+    }
 
     @Override
-    public boolean run(int x) {
-       return x < 500;
+    boolean run(int x) {
+       return x < 300 + random.nextInt(300);
     }
 
     @Override
